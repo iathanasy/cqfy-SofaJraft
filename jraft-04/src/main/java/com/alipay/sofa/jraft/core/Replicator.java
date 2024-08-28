@@ -149,7 +149,7 @@ public class Replicator implements ThreadId.OnError {
      */
     public static ThreadId start(final ReplicatorOptions opts, final RaftOptions raftOptions) {
         //对相关组件进行判空操作，看看日志管理器，投票箱，当前节点是否为空
-        if (opts.getLogManager() == null || opts.getBallotBox() == null || opts.getNode() == null) {
+        if (opts.getLogManager() == null || opts.getNode() == null) {
             throw new IllegalArgumentException("Invalid ReplicatorOptions.");
         }
         //创建复制器对象，这时候这两个配置参数对象就派上用场了
@@ -323,7 +323,7 @@ public class Replicator implements ThreadId.OnError {
         //第一条日志的索引默认为1，前一条日志的索引肯定就是0，根据前一条日志索引获取前一条日志的任期
         //这里得到的就是0，这个要理清楚，这样在跟随者那里校验索引和日志的时候，才能校验成功
         final long prevLogTerm = this.options.getLogManager().getTerm(prevLogIndex);
-        //该方法在这里省略了一段校验是否需要安装快照的逻辑，在代码的第7版本将会为大家补全
+        //该方法在这里省略了一段校验是否需要安装快照的逻辑，在代码的第9版本将会为大家补全
         rb.setTerm(this.options.getTerm());
         rb.setGroupId(this.options.getGroupId());
         rb.setServerId(this.options.getServerId().toString());
@@ -331,7 +331,8 @@ public class Replicator implements ThreadId.OnError {
         rb.setPeerId(this.options.getPeerId().toString());
         rb.setPrevLogIndex(prevLogIndex);
         rb.setPrevLogTerm(prevLogTerm);
-        rb.setCommittedIndex(this.options.getBallotBox().getLastCommittedIndex());
+        //rb.setCommittedIndex(this.options.getBallotBox().getLastCommittedIndex());
+        rb.setCommittedIndex(0);
         return true;
     }
 
@@ -364,7 +365,7 @@ public class Replicator implements ThreadId.OnError {
                         break;
                     }
                 } else {//走到这里意味着获得的下一次要发送的日志的索引并不大于上一次
-                    //其实是等于，这是另一种情况了，需要在第六版本才能展开讲解，这里就先不展开了
+                    //这里的逻辑在第六版本代码才能看明白，在第四版本代码中，大家可以暂时忽略这个else分支
                     break;
                 }
             }
@@ -860,7 +861,7 @@ public class Replicator implements ThreadId.OnError {
                 sb.append(" fail, find nextIndex remote lastLogIndex ").append(response.getLastLogIndex())
                         .append(" local nextIndex ").append(r.nextIndex);
                 LOG.debug(sb.toString());
-            } //更新上一次向跟随者发送请求的事件
+            } //更新上一次向跟随者发送请求的时间
             if (rpcSendTime > r.lastRpcSendTimestamp) {
                 r.lastRpcSendTimestamp = rpcSendTime;
             }//下面是复制日志的对应响应，大家应该还记得，这个方法在发送探针消息和复制日志请求，收到响应后都会被回调
@@ -875,7 +876,7 @@ public class Replicator implements ThreadId.OnError {
                 if (r.nextIndex > 1) {
                     LOG.debug("logIndex={} dismatch", r.nextIndex);
                     //这个要从跟随者的handleAppendEntriesRequest方法中查看一下，是怎么根据领导者要发送的下一条日志的前一条日志的索引
-                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还大
+                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者小
                     //这时候需要让领导者的要发送的下一条日志递减，直到可以跟跟随者匹配到相同任期的日志，然后让领导者开始传输复制即可
                     //之前跟随者的日志比较大可能是因为旧的领导者发送的，比如整个集群就发送给了这一个节点，但是还没有提交，还没来得及提交旧的领导者就宕机了
                     r.nextIndex--;

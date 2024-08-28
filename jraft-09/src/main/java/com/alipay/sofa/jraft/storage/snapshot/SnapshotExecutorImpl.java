@@ -72,6 +72,7 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
     private RaftOutter.SnapshotMeta loadingSnapshotMeta;
     //正在执行的任务的数量
     private final CountDownEvent runningJobs = new CountDownEvent();
+    //快照复制器
     private SnapshotCopier curCopier;
 
 
@@ -265,6 +266,7 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
         final FirstSnapshotLoadDone done = new FirstSnapshotLoadDone(reader);
         //在这里状态机组件开始加载快照了，到这里大家应该也能意识到了，如果节点启动的时候，本地已经有快照文件了
         //那么状态机就要把快照文件中记录的数据都应用到状态机上，这就是所谓的加载快照文件
+        //这就是通过加载快照文件，快速使节点回复到宕机之前状态的最好方法
         Requires.requireTrue(this.fsmCaller.onSnapshotLoad(done));
         try {
             //在这里同步等待快照加载完成
@@ -539,21 +541,28 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
 
 
     private void onSnapshotLoadDone(final Status st) {
+        //定义一个快照下载任务对象
         DownloadingSnapshot m;
         boolean doUnlock = true;
         this.lock.lock();
         try {
+            //因为刚刚把快照数据应用到状态机上，所以这里肯定还是正在加载快照的状态
             Requires.requireTrue(this.loadingSnapshot, "Not loading snapshot");
+            //获取当前正在进行的下载快照的任务
             m = this.downloadingSnapshot.get();
+            //这里判断快照是成功应用到状态机上了
             if (st.isOk()) {
+                //如果成功则更新最后应用的日志的索引
                 this.lastSnapshotIndex = this.loadingSnapshotMeta.getLastIncludedIndex();
+                //更新最后应用的日志的人气
                 this.lastSnapshotTerm = this.loadingSnapshotMeta.getLastIncludedTerm();
                 doUnlock = false;
                 this.lock.unlock();
-                this.logManager.setSnapshot(this.loadingSnapshotMeta); // should be out of lock
+                //更新日志管理器中的快照元数据
+                this.logManager.setSnapshot(this.loadingSnapshotMeta);
                 doUnlock = true;
                 this.lock.lock();
-            }
+            }//下面是记录日志的操作
             final StringBuilder sb = new StringBuilder();
             if (this.node != null) {
                 sb.append("Node ").append(this.node.getNodeId()).append(" ");
@@ -562,12 +571,15 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
             LOG.info(sb.toString());
             doUnlock = false;
             this.lock.unlock();
+            //在安装快照之后检查节点配置信息是否发生了变化
             if (this.node != null) {
                 this.node.updateConfigurationAfterInstallingSnapshot();
             }
             doUnlock = true;
             this.lock.lock();
+            //快照也应用完了，可以把正在架子啊快照的标志设置为false了
             this.loadingSnapshot = false;
+            //重置正在进行的下载快照的任务
             this.downloadingSnapshot.set(null);
 
         } finally {
@@ -576,63 +588,93 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
             }
         }
         if (m != null) {
-            // Respond RPC
+            //再次判断快照数据是否应用成功了
             if (!st.isOk()) {
+                //不成功则执行回调方法
                 m.done.run(st);
             } else {
+                //成功则直接回复领导者一个成功响应
                 m.responseBuilder.setSuccess(true);
                 m.done.sendResponse(m.responseBuilder.build());
             }
         }
+        //将正在执行的任务减1，因为已经完成了一个安装快照的任务了
         this.runningJobs.countDown();
     }
 
-    @Override
-    public void installSnapshot(final RpcRequests.InstallSnapshotRequest request, final RpcRequests.InstallSnapshotResponse.Builder response,
+
+
+    /**
+     * @课程描述:从零带你写框架系列中的课程，整个系列包含netty，xxl-job，rocketmq，nacos，sofajraft，spring，springboot，disruptor，编译器，虚拟机等等。
+     * @author：陈清风扬，个人微信号：chenqingfengyangjj。
+     * @date:2024/3/13
+     * @方法描述：安装快照的方法
+     */
+    public void installSnapshot(final RpcRequests.InstallSnapshotRequest request,
+                                final RpcRequests.InstallSnapshotResponse.Builder response,
                                 final RpcRequestClosure done) {
+        //从请求中得到要安装的快照文件的元数据
         final RaftOutter.SnapshotMeta meta = request.getMeta();
+        //创建一个正在下载快照的任务
         final DownloadingSnapshot ds = new DownloadingSnapshot(request, response, done);
-        // DON'T access request, response, and done after this point
-        // as the retry snapshot will replace this one.
+        //接下来，在该方法中当前跟随者节点就会从领导者节点把快照数据下载下来
         if (!registerDownloadingSnapshot(ds)) {
             LOG.warn("Fail to register downloading snapshot.");
-            // This RPC will be responded by the previous session
+            //直接退出该方法，失败响应已经在registerDownloadingSnapshot方法中回复给领导者了
             return;
         }
+        //检验快照复制器是否为空
         Requires.requireNonNull(this.curCopier, "curCopier");
         try {
+            //等待快照复制器将快照远程下载完毕，直到下载完毕，程序才能继续向下运行
             this.curCopier.join();
         } catch (final InterruptedException e) {
             Thread.currentThread().interrupt();
             LOG.warn("Install snapshot copy job was canceled.");
             return;
         }
-
+        //到这里就意味着快照已经下载完成了，可以加载到当前的跟随者节点中了
         loadDownloadingSnapshot(ds, meta);
     }
 
+
+
+    //加载快照文件中的数据到状态机的方法
     void loadDownloadingSnapshot(final DownloadingSnapshot ds, final RaftOutter.SnapshotMeta meta) {
+        //定义一个快照读取器
         SnapshotReader reader;
+        // 获取锁以保护快照的加载过程
         this.lock.lock();
         try {
+            //判断本次下载快照的任务就是之前保存的那个，这说明快照下载的操作没有被打断或者取消
+            //是顺利完成的
             if (ds != this.downloadingSnapshot.get()) {
-                // It is interrupted and response by other request,just return
                 return;
             }
+            //校验快照复制器不为空
             Requires.requireNonNull(this.curCopier, "curCopier");
+            //获得快照读取器，注意，这里获取的快照读取器就可以读取从领导者复制到本地的最新的快照文件了
+            //因为当快照复制器把领导者快照下载到本地后，快照存储器中的快照路径就被更新了，这时候通过快照复制器
+            //去得到快照读取器，实际上是通过快照复制器内部的快照存储器得到的快照读取器，快照路径已经跟新
+            //所以得到的这个快照读取器就可以直接读取最新的快照文件
             reader = this.curCopier.getReader();
             if (!this.curCopier.isOk()) {
+                //判断快照复制器在工作期间是否出现问题了
                 if (this.curCopier.getCode() == RaftError.EIO.getNumber()) {
                     reportError(this.curCopier.getCode(), this.curCopier.getErrorMsg());
                 }
+                //如果出现问题了就关闭快照读取器
                 Utils.closeQuietly(reader);
+                //执行回调方法
                 ds.done.run(this.curCopier);
+                //关闭快照复制器
                 Utils.closeQuietly(this.curCopier);
                 this.curCopier = null;
                 this.downloadingSnapshot.set(null);
                 this.runningJobs.countDown();
                 return;
             }
+            //下面都是释放资源的操作
             Utils.closeQuietly(this.curCopier);
             this.curCopier = null;
             if (reader == null || !reader.isOk()) {
@@ -645,44 +687,60 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
                 this.runningJobs.countDown();
                 return;
             }
+            //走到这里说明程序没什么问题，那就可以直接加载快照了
+            //注意，这里加载快照的意思就是把从领导者复制过来的快照加载到内存中，然后应用到状态机上
             this.loadingSnapshot = true;
+            //给快照元数据复制
             this.loadingSnapshotMeta = meta;
         } finally {
             this.lock.unlock();
         }
+        //创建一个回调对象，该对象中的run方法会在当前节点把快照数据应用到状态机上后回调
         final InstallSnapshotDone installSnapshotDone = new InstallSnapshotDone(reader);
+        //把快照数据应用到状态机上
         if (!this.fsmCaller.onSnapshotLoad(installSnapshotDone)) {
             LOG.warn("Fail to call fsm onSnapshotLoad.");
+            //应用失败执行回调方法
             installSnapshotDone.run(new Status(RaftError.EHOSTDOWN, "This raft node is down"));
         }
     }
 
 
+
+    //注册一个复制远程快照数据的任务，这个任务是靠LocalSnapshotCopier对象来完成的
     @SuppressWarnings("all")
     boolean registerDownloadingSnapshot(final DownloadingSnapshot ds) {
+        //定义一个私有变量来记录正在下载的快照任务
         DownloadingSnapshot saved = null;
+        //定义一个下载快照操作成功的标志
         boolean result = true;
-
+        //上锁
         this.lock.lock();
         try {
+            //如果快照执行器已经停止工作，就返回给领导者一个错误响应
+            //注意，大家要理清楚，给跟随着节点安装快照的操作是领导者主动发起的，领导者通知跟随者节点要安装快照了
+            //然后跟随者节点远程下载领导者的快照文件，但是当跟随者节点内部没有启动快照执行器的话是无法下载的，所以要给领导者回复一个错误响应
+            //让领导者知道跟随者无法下载快照文件
             if (this.stopped) {
                 LOG.warn("Register DownloadingSnapshot failed: node is stopped.");
-                ds.done
-                        .sendResponse(RpcFactoryHelper //
+                ds.done.sendResponse(RpcFactoryHelper //
                                 .responseFactory() //
                                 .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EHOSTDOWN,
                                         "Node is stopped."));
                 return false;
             }
+            //如果跟随者节点正在生成自己的快照，也回复给领导着一个错误响应
+            //响应状态为跟随者节点目前繁忙
             if (this.savingSnapshot) {
                 LOG.warn("Register DownloadingSnapshot failed: is saving snapshot.");
-                ds.done.sendResponse(RpcFactoryHelper //
+                ds.done.sendResponse(RpcFactoryHelper
                         .responseFactory().newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EBUSY,
                                 "Node is saving snapshot."));
                 return false;
             }
-
+            //设置响应中的任期
             ds.responseBuilder.setTerm(this.term);
+            //判断请求中的任期和当前节点任期是否一致，不一致则给领导者返回一个失败响应
             if (ds.request.getTerm() != this.term) {
                 LOG.warn("Register DownloadingSnapshot failed: term mismatch, expect {} but {}.", this.term,
                         ds.request.getTerm());
@@ -690,6 +748,11 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
                 ds.done.sendResponse(ds.responseBuilder.build());
                 return false;
             }
+            //这里的这个判断很重要，因为在集群中不只是领导者自己会生成快照文件，跟随者节点也会生成快照文件
+            //lastSnapshotIndex就是当前节点生成的快照文件中应用的最后一条日志的索引
+            //如果从领导者传递过来的这个lastSnapshotIndex比当前节点的lastSnapshotIndex还小，说明当前节点应用的日志比领导者传递过来的这个快照文件应用的最新日志要新
+            //这就意味着领导者要给当前节点安装的快照是旧的，或者是过期的，不必安装
+            //跟随者节点直接忽略这个请求，回复一个成功响应即可
             if (ds.request.getMeta().getLastIncludedIndex() <= this.lastSnapshotIndex) {
                 LOG.warn(
                         "Register DownloadingSnapshot failed: snapshot is not newer, request lastIncludedIndex={}, lastSnapshotIndex={}.",
@@ -698,62 +761,67 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
                 ds.done.sendResponse(ds.responseBuilder.build());
                 return false;
             }
+            //获取当前正在下载的快照文件
             final DownloadingSnapshot m = this.downloadingSnapshot.get();
+            //如果跟随者节点还没有开始远程下载领导者内部的快照文件
             if (m == null) {
+                //就把在外层方法创建的快照下载任务设置到downloadingSnapshot中
                 this.downloadingSnapshot.set(ds);
+                //接下来就要开始远程下载快照，创建快照文件下载器，再没创建之前要校验一下快照文件下载器应该为null
                 Requires.requireTrue(this.curCopier == null, "Current copier is not null");
+                //在这里远程下载快照文件，返回一个快照文件下载器
                 this.curCopier = this.snapshotStorage.startToCopyFrom(ds.request.getUri(), newCopierOpts());
+                //如果curCopier为null，说明远程下载快照文件失败，返回领导者一个失败响应
                 if (this.curCopier == null) {
                     this.downloadingSnapshot.set(null);
                     LOG.warn("Register DownloadingSnapshot failed: fail to copy file from {}.", ds.request.getUri());
-                    ds.done.sendResponse(RpcFactoryHelper //
-                            .responseFactory() //
+                    ds.done.sendResponse(RpcFactoryHelper
+                            .responseFactory()
                             .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EINVAL,
                                     "Fail to copy from: %s", ds.request.getUri()));
                     return false;
                 }
+                //增加正在运行的任务数量
                 this.runningJobs.incrementAndGet();
                 return true;
             }
-
-            // A previous snapshot is under installing, check if this is the same
-            // snapshot and resume it, otherwise drop previous snapshot as this one is
-            // newer
-
+            //程序执行到这里意味着刚才的得到的m，也就是正在执行的快照下载任务不为空，说明已经有快照正在从领导者那里下载了
+            //经过判断也发现两个快照文件下载任务中封装的请求中的last_included_index也相同，这就意味着快照请求发送重复了
             if (m.request.getMeta().getLastIncludedIndex() == ds.request.getMeta().getLastIncludedIndex()) {
-                // m is a retry
-                // Copy |*ds| to |*m| so that the former session would respond
-                // this RPC.
                 saved = m;
                 this.downloadingSnapshot.set(ds);
                 result = true;
             } else if (m.request.getMeta().getLastIncludedIndex() > ds.request.getMeta().getLastIncludedIndex()) {
-                // |is| is older
+                //走到这里就是当前接收到的快照请求是旧的，m封装的快照请求是新的，可能快照请求重复发送了
+                //这时候就要返回一个错误响应给领导者
                 LOG.warn("Register DownloadingSnapshot failed: is installing a newer one, lastIncludeIndex={}.",
                         m.request.getMeta().getLastIncludedIndex());
-                ds.done.sendResponse(RpcFactoryHelper //
-                        .responseFactory() //
+                ds.done.sendResponse(RpcFactoryHelper
+                        .responseFactory()
                         .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EINVAL,
                                 "A newer snapshot is under installing"));
                 return false;
             } else {
-                // |is| is newer
+                //如果走到这里意味着接收到的请求中的快照是新的，但这就意味着当前节点正在从领导者下载旧快照，所以也回复一个错误响应
+                //如果当前节点正在加载快照，那么正在加载的快照一定是旧的，因为现在复制下来的一定是最新的
                 if (this.loadingSnapshot) {
+                    //如果正在加载旧快照，就回复一个节点繁忙的状态码
                     LOG.warn("Register DownloadingSnapshot failed: is loading an older snapshot, lastIncludeIndex={}.",
                             m.request.getMeta().getLastIncludedIndex());
-                    ds.done.sendResponse(RpcFactoryHelper //
-                            .responseFactory() //
+                    ds.done.sendResponse(RpcFactoryHelper
+                            .responseFactory()
                             .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EBUSY,
                                     "A former snapshot is under loading"));
                     return false;
-                }
+                }//校验快照复制器不为null
                 Requires.requireNonNull(this.curCopier, "curCopier");
+                //取消复制快照的操作
                 this.curCopier.cancel();
                 LOG.warn(
                         "Register DownloadingSnapshot failed: an older snapshot is under installing, cancel downloading, lastIncludeIndex={}.",
                         m.request.getMeta().getLastIncludedIndex());
-                ds.done.sendResponse(RpcFactoryHelper //
-                        .responseFactory() //
+                ds.done.sendResponse(RpcFactoryHelper
+                        .responseFactory()
                         .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EBUSY,
                                 "A former snapshot is under installing, trying to cancel"));
                 return false;
@@ -762,15 +830,16 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
             this.lock.unlock();
         }
         if (saved != null) {
-            // Respond replaced session
             LOG.warn("Register DownloadingSnapshot failed: interrupted by retry installing request.");
-            saved.done.sendResponse(RpcFactoryHelper //
-                    .responseFactory() //
+            saved.done.sendResponse(RpcFactoryHelper
+                    .responseFactory()
                     .newResponse(RpcRequests.InstallSnapshotResponse.getDefaultInstance(), RaftError.EINTR,
                             "Interrupted by the retry InstallSnapshotRequest"));
         }
         return result;
     }
+
+
 
     private SnapshotCopierOptions newCopierOpts() {
         final SnapshotCopierOptions copierOpts = new SnapshotCopierOptions();
@@ -843,17 +912,17 @@ public class SnapshotExecutorImpl implements SnapshotExecutor {
         } finally {
             this.lock.unlock();
         }
-        out.print("  lastSnapshotTerm: ") //
+        out.print("  lastSnapshotTerm: ")
                 .println(_lastSnapshotTerm);
-        out.print("  lastSnapshotIndex: ") //
+        out.print("  lastSnapshotIndex: ")
                 .println(_lastSnapshotIndex);
-        out.print("  term: ") //
+        out.print("  term: ")
                 .println(_term);
-        out.print("  savingSnapshot: ") //
+        out.print("  savingSnapshot: ")
                 .println(_savingSnapshot);
-        out.print("  loadingSnapshot: ") //
+        out.print("  loadingSnapshot: ")
                 .println(_loadingSnapshot);
-        out.print("  stopped: ") //
+        out.print("  stopped: ")
                 .println(_stopped);
     }
 }

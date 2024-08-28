@@ -759,14 +759,25 @@ public class FSMCallerImpl implements FSMCaller {
 
 
 
+    /**
+     * @课程描述:从零带你写框架系列中的课程，整个系列包含netty，xxl-job，rocketmq，nacos，sofajraft，spring，springboot，disruptor，编译器，虚拟机等等。
+     * @author：陈清风扬，个人微信号：chenqingfengyangjj。
+     * @date:2024/3/14
+     * @方法描述：该方法就是把快照中的数据应用到状态机上
+     */
     private void doSnapshotLoad(final LoadSnapshotClosure done) {
+        //校验回调对象不为null
         Requires.requireNonNull(done, "LoadSnapshotClosure is null");
+        //得到快照读取器
         final SnapshotReader reader = done.start();
+        //对快照读取器做判空操作
         if (reader == null) {
             done.run(new Status(RaftError.EINVAL, "open SnapshotReader failed"));
             return;
         }
+        //使用快照读取器加载快照元数据
         final RaftOutter.SnapshotMeta meta = reader.load();
+        //对快照元数据做判空操作
         if (meta == null) {
             done.run(new Status(RaftError.EINVAL, "SnapshotReader load meta failed"));
             if (reader.getRaftError() == RaftError.EIO) {
@@ -776,8 +787,12 @@ public class FSMCallerImpl implements FSMCaller {
             }
             return;
         }
+        //现在得到的是目前状态机应用的最后一条日志的Id，这个日志Id对象包含应用的最后一条日志的索引和任期
         final LogId lastAppliedId = new LogId(this.lastAppliedIndex.get(), this.lastAppliedTerm);
+        //根据从领导者下载的快照元数据创建一个最新的要被应用的日志Id对象
         final LogId snapshotId = new LogId(meta.getLastIncludedIndex(), meta.getLastIncludedTerm());
+        //将上面两个日志Id对象做一下判断，如果当前状态及的日志Id大于领导者快照应用的最新日志Id
+        //说明从领导者传递过来的是一个过期快照，不能应用快照中的数据
         if (lastAppliedId.compareTo(snapshotId) > 0) {
             done.run(new Status(
                     RaftError.ESTALE,
@@ -785,6 +800,7 @@ public class FSMCallerImpl implements FSMCaller {
                     lastAppliedId.getIndex(), lastAppliedId.getTerm(), snapshotId.getIndex(), snapshotId.getTerm()));
             return;
         }
+        //在这里应用快照文件中的所有数据到用户定义的状态机上
         if (!this.fsm.onSnapshotLoad(reader)) {
             done.run(new Status(-1, "StateMachine onSnapshotLoad failed"));
             final RaftException e = new RaftException(EnumOutter.ErrorType.ERROR_TYPE_STATE_MACHINE,
@@ -792,39 +808,27 @@ public class FSMCallerImpl implements FSMCaller {
             setError(e);
             return;
         }
+        //从快照元数据中获得领导者配置信息
         if (meta.getOldPeersCount() == 0) {
-            // Joint stage is not supposed to be noticeable by end users.
             final Configuration conf = new Configuration();
+            //构建配置信息对象
             for (int i = 0, size = meta.getPeersCount(); i < size; i++) {
                 final PeerId peer = new PeerId();
                 Requires.requireTrue(peer.parse(meta.getPeers(i)), "Parse peer failed");
                 conf.addPeer(peer);
             }
+            //状态机更新配置信息
             this.fsm.onConfigurationCommitted(conf);
         }
+        //更新提交的最新的日志索引
         this.lastCommittedIndex.set(meta.getLastIncludedIndex());
+        //更新应用的最新日志索引
         this.lastAppliedIndex.set(meta.getLastIncludedIndex());
+        //更新最新应用的日志人气
         this.lastAppliedTerm = meta.getLastIncludedTerm();
+        //执行回调方法
         done.run(Status.OK());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @Override

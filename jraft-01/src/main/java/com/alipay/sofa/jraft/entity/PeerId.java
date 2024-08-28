@@ -24,9 +24,9 @@ public class PeerId implements Copiable<PeerId>, Serializable, Checksum {
     //当前节点的IP地址和端口号就封装在这个成员变量对象中
     private Endpoint endpoint = new Endpoint(Utils.IP_ANY, 0);
     //这个是在同样的IP地址下，用来区分集群中不同节点的
-    //比如在一个容器中有三个节点，三个节点使用的IP地址是相同的，这时候就可以通过这个idx来区分这三个节点了
+    //比如在某个特定环境下，三个节点使用的IP地址是相同的，这时候就可以通过这个idx来区分这三个节点了
     //比如IP地址和端口号都是localhost:8080
-    //idx分别为1，2，3这样就区分开了
+    //idx分别为1，2，3这样就区分开了，在我们的课程中不会讨论这种情况，实际上，我们应该不会这样来部署自己的程序
     private int idx;
     //该类对象的toString结果的缓存
     private String str;

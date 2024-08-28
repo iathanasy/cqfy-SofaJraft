@@ -104,8 +104,8 @@ public class DefaultRaftTimerFactory implements RaftTimerFactory {
     private static abstract class Shared<T> {
 
         private AtomicInteger refCount = new AtomicInteger(0);
-        private AtomicBoolean started  = new AtomicBoolean(true);
-        protected final T     shared;
+        private AtomicBoolean started = new AtomicBoolean(true);
+        protected final T shared;
 
         protected Shared(T shared) {
             this.shared = shared;
@@ -133,9 +133,9 @@ public class DefaultRaftTimerFactory implements RaftTimerFactory {
     //这个内部类中的泛型类型其实就是一个定时任务管理器
     private static abstract class SharedRef<T> {
 
-        private final int    workerNum;
+        private final int workerNum;
         private final String name;
-        private Shared<T>    shared;
+        private Shared<T> shared;
 
         public SharedRef(int workerNum, String name) {
             this.workerNum = workerNum;

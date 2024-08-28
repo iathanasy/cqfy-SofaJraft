@@ -719,7 +719,6 @@ public class Replicator implements ThreadId.OnError {
 
                             @Override
                             public void run(final Status status) {
-                                System.out.println("探针消息收到回复了！！！");
                                 onRpcReturned(Replicator.this.id, status, request, getResponse(), monotonicSendTimeMs);
                             }
                         });
@@ -877,7 +876,7 @@ public class Replicator implements ThreadId.OnError {
                 if (r.nextIndex > 1) {
                     LOG.debug("logIndex={} dismatch", r.nextIndex);
                     //这个要从跟随者的handleAppendEntriesRequest方法中查看一下，是怎么根据领导者要发送的下一条日志的前一条日志的索引
-                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还大
+                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还小
                     //这时候需要让领导者的要发送的下一条日志递减，直到可以跟跟随者匹配到相同任期的日志，然后让领导者开始传输复制即可
                     //之前跟随者的日志比较大可能是因为旧的领导者发送的，比如整个集群就发送给了这一个节点，但是还没有提交，还没来得及提交旧的领导者就宕机了
                     r.nextIndex--;

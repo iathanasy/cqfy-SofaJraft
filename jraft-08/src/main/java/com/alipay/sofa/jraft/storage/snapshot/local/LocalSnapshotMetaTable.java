@@ -72,7 +72,7 @@ public class LocalSnapshotMetaTable {
 
 
     public boolean addFile(final String fileName, final LocalFileMetaOutter.LocalFileMeta meta) {
-        //这里就是把快照文件的名称和对应的元数据
+        //这里就是把快照文件的名称和对应的元数据添加到fileMap中，最终fileMap中的数据是需要落盘的
         return this.fileMap.putIfAbsent(fileName, meta) == null;
     }
 

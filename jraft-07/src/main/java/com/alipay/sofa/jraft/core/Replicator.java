@@ -1254,9 +1254,9 @@ public class Replicator implements ThreadId.OnError {
                     .append(" count=")
                     .append(request.getEntriesCount());
         }
-        //这里会判断一下status是否有误，这个status是从bolt那里包装过来的
-        //虽然Status是jraft框架中的类，但是在当前方法中的Status参数，要在bolft框架的rpc通信之后
-        //才能确定是成功还是错误状态
+        //这里会判断一下status是否有误，这个status也是从跟随者节点恢复过来的响应
+        //也是一个错误响应，只不过这个响应只拥有错误状态码，领导者只需要根据这个错误状态吗判断错误即可
+        //在文章中我会为大家讲解什么时候跟随者节点只会回复错误状态码
         if (!status.isOk()) {
             //如果响应有误，那就重置inflight队列
             if (isLogDebugEnabled) {
@@ -1328,7 +1328,7 @@ public class Replicator implements ThreadId.OnError {
                 if (r.nextIndex > 1) {
                     LOG.debug("logIndex={} dismatch", r.nextIndex);
                     //这个要从跟随者的handleAppendEntriesRequest方法中查看一下，是怎么根据领导者要发送的下一条日志的前一条日志的索引
-                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还大
+                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还小
                     //这时候需要让领导者的要发送的下一条日志递减，直到可以跟跟随者匹配到相同任期的日志，然后让领导者开始传输复制即可
                     //之前跟随者的日志比较大可能是因为旧的领导者发送的，比如整个集群就发送给了这一个节点，但是还没有提交，还没来得及提交旧的领导者就宕机了
                     r.nextIndex--;

@@ -63,9 +63,9 @@ public class NodeImpl implements Node, RaftServerService {
     private volatile State state;
     //节点的当前任期
     private long currTerm;
-    //上一次收到领导者的时间
+    //上一次收到领导者信息的时间
     private volatile long lastLeaderTimestamp;
-    //当前节点的PeerId
+    //当前节点记录的领导者的PeerId
     private PeerId leaderId = new PeerId();
     //当前节点投过票的节点的PeerId，这个成员变量可以记录下来，当前节点为哪个节点投过票
     private PeerId votedId;
@@ -101,6 +101,8 @@ public class NodeImpl implements Node, RaftServerService {
     private NodeId nodeId;
     //为jraft框架提供各种服务的工厂，在第一版本中，这个工厂只提供了元数据存储器服务
     private JRaftServiceFactory serviceFactory;
+    //投票超时处理定时器
+    private RepeatedTimer voteTimer;
 
     @Override
     public void describe(Printer out) {
@@ -372,8 +374,23 @@ public class NodeImpl implements Node, RaftServerService {
                 this.options.getTimerPoolSize(), "JRaft-Node-ScheduleThreadPool");
         //缓存NodeId对象的toString方法结果
         final String suffix = getNodeId().toString();
-        //下面我删减了很多代码，大家简单看看就行，在源码中快照服务，状态机，日志组件都会初始化，但在第一版本中我全删除了
         String name = "JRaft-VoteTimer-" + suffix;
+        //创建投票超时定时处理器
+        this.voteTimer = new RepeatedTimer(name, this.options.getElectionTimeoutMs(), TIMER_FACTORY.getVoteTimer(
+                this.options.isSharedVoteTimer(), name)) {
+
+            @Override
+            protected void onTrigger() {
+                //处理投票超时的方法
+                handleVoteTimeout();
+            }
+
+            @Override
+            protected int adjustTimeout(final int timeoutMs) {
+                return randomTimeout(timeoutMs);
+            }
+        };
+        //下面我删减了很多代码，大家简单看看就行，在源码中快照服务，状态机，日志组件都会初始化，但在第一版本中我全删除了
         name = "JRaft-ElectionTimer-" + suffix;
         //在这里创建了一个超时选举定时器，this.options.getElectionTimeoutMs()得到的就是超时选举时间
         this.electionTimer = new RepeatedTimer(name, this.options.getElectionTimeoutMs(),
@@ -465,6 +482,39 @@ public class NodeImpl implements Node, RaftServerService {
     public void shutdown() {
 
     }
+
+
+    /**
+     * @课程描述:从零带你写框架系列中的课程，整个系列包含netty，xxl-job，rocketmq，nacos，sofajraft，spring，springboot，disruptor，编译器，虚拟机等等。
+     * @author：陈清风扬，个人微信号：chenqingfengyangjj。
+     * @date:2024/1/4
+     * @方法描述：处理选举超时的方法，这个我写上来了，但是没有使用。大家看看代码就行。这个是我临时改的，为了配置第四篇文章使用的
+     */
+    private void handleVoteTimeout() {
+        this.writeLock.lock();
+        //判断当前节点状态是否为候选者，只有候选者才会出现投票超时的情况，也就是在一定时间内还没有成为主节点
+        if (this.state != State.STATE_CANDIDATE) {
+            this.writeLock.unlock();
+            return;
+        }
+        //判断当前节点是否设置了选举超时的身份降级方法
+        if (this.raftOptions.isStepDownWhenVoteTimedout()) {
+            LOG.warn(
+                    "Candidate node {} term {} steps down when election reaching vote timeout: fail to get quorum vote-granted.",
+                    this.nodeId, this.currTerm);
+            //进行身份降级，把当前节点降级为跟随者，然后重新开始预投票操作
+            stepDown(this.currTerm, false, new Status(RaftError.ETIMEDOUT,
+                    "Vote timeout: fail to get quorum vote-granted."));
+            //进行预投票操作
+            preVote();
+        } else {
+            LOG.debug("Node {} term {} retry to vote self.", getNodeId(), this.currTerm);
+            //如果没有设置身份降级，就直接再次进行选举操作，这里开启了新一轮选举操作
+            electSelf();
+        }
+    }
+
+
 
     /**
      * @author:B站UP主陈清风扬，从零带你写框架系列教程的作者，个人微信号：chenqingfengyangjj。
@@ -1014,7 +1064,7 @@ public class NodeImpl implements Node, RaftServerService {
             //更新最后一次接收到领导者消息的时间
             updateLastLeaderTimestamp(Utils.monotonicMs());
             //这是我自己添加的代码
-            LOG.info("FOLLOWER接收到了心跳消息！");
+            LOG.info("jraft1FOLLOWER接收到了心跳消息！");
             //下面一大段代码都是和日志有关的，因为当前的请求消息可能就是日志复制消息，消息对象中封装着传入过来的日志
             //如果当前节点要复制主节点的日志，肯定要对比一下当前节点和请求中日志是否符合要求
             //第一版本中把这些代码删除了，这个方法中还有日志复制的逻辑，以及一些耗时的统计信息等等，这些代码在第一版本全部删除了

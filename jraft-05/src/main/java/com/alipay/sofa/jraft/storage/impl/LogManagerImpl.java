@@ -545,9 +545,9 @@ public class LogManagerImpl implements LogManager {
             //具体逻辑就在下面
             done.setEntries(entries);
             doUnlock = false;
-             //这个逻辑是用来唤醒复制器的，复制器会一直将日志向跟随者传输，当领导者中没有
-            //日志的时候，复制器就会阻塞，并且会注册一个回调函数监听领导者是不是有日志了，当有日志的时候就会唤醒复制器
-            //复制器被唤醒后就会直接从刚才存放了日志的缓存组件logsInMemory中，把日志直接传输给跟随者
+            //这个逻辑是用来唤醒复制器的，复制器会一直将日志向跟随者传输，当领导者中没有
+            //日志的时候，复制器就会停止发送日志，并且会注册一个回调函数监听领导者是不是有日志了，当有日志的时候就会通知复制器
+            //复制器就会直接从刚才存放了日志的缓存组件logsInMemory中，把日志直接传输给跟随者
             wakeupAllWaiter(this.writeLock);
             //发布生产者数据，Disruptor可以将日志异步落盘了
             //这里大家也可已看到，日志落盘整个系列操作几乎就是用Disruptor衔接起来的，关键步骤都是异步和回调
@@ -677,7 +677,7 @@ public class LogManagerImpl implements LogManager {
                     //entries.get(conflictingIndex).getId().getTerm()得到的就是领导者发送过来的日志任期
                     //然后将这两个任期做对比。这里为什么非要使用这个循环呢？我感觉日志有重叠，肯定是从领导者发送过来的本批次日志的第一条日志就开始重叠了呀
                     //还是用上面的例子，领导者发送过来的第一条日志的索引为8，当前跟随者节点要接收的下一条日志为11，肯定就是把跟随者日志索引从8开始，包括8在内的
-                    //日志全部删除呀，为什么非要用循环找一遍呢？
+                    //日志全部删除呀，为什么非要用循环找一遍呢？脑子秀逗了，找一遍的目的就是为了判断当前日志是不是重复传输了
                     if (unsafeGetTerm(entries.get(conflictingIndex).getId().getIndex()) != entries
                             .get(conflictingIndex).getId().getTerm()) {
                         break;

@@ -1,5 +1,6 @@
 package com.alipay.sofa.jraft.option;
 
+import com.alipay.sofa.jraft.core.BallotBox;
 import com.alipay.sofa.jraft.core.NodeImpl;
 import com.alipay.sofa.jraft.core.Scheduler;
 import com.alipay.sofa.jraft.rpc.RaftClientService;
@@ -26,6 +27,8 @@ public class ReplicatorGroupOptions {
     private RaftOptions raftOptions;
 
     private Scheduler timerManager;
+
+    private BallotBox ballotBox;
 
 
     public Scheduler getTimerManager() {
@@ -82,6 +85,14 @@ public class ReplicatorGroupOptions {
 
     public void setLogManager(LogManager logManager) {
         this.logManager = logManager;
+    }
+
+    public BallotBox getBallotBox() {
+        return this.ballotBox;
+    }
+
+    public void setBallotBox(BallotBox ballotBox) {
+        this.ballotBox = ballotBox;
     }
 
     @Override

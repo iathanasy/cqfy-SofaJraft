@@ -6,7 +6,7 @@ import com.alipay.sofa.jraft.entity.NodeId;
 import com.alipay.sofa.jraft.entity.PeerId;
 import com.alipay.sofa.jraft.error.RaftError;
 import com.alipay.sofa.jraft.option.RaftOptions;
-import com.alipay.sofa.jraft.option.ReplicatorGroupOptions;
+import com.alipay.sofa.jraft.option.*;
 import com.alipay.sofa.jraft.option.ReplicatorOptions;
 import com.alipay.sofa.jraft.rpc.RaftClientService;
 import com.alipay.sofa.jraft.rpc.RpcRequests;
@@ -62,6 +62,7 @@ public class ReplicatorGroupImpl implements ReplicatorGroup {
         this.commonOptions.setElectionTimeoutMs(this.electionTimeoutMs);
         this.commonOptions.setRaftRpcService(opts.getRaftRpcClientService());
         this.commonOptions.setLogManager(opts.getLogManager());
+        this.commonOptions.setBallotBox(opts.getBallotBox());
         this.commonOptions.setNode(opts.getNode());
         this.commonOptions.setTerm(0);
         this.commonOptions.setGroupId(nodeId.getGroupId());

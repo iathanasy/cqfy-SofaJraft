@@ -3,7 +3,7 @@ package com.alipay.sofa.jraft;
 import com.alipay.sofa.jraft.core.ReplicatorType;
 import com.alipay.sofa.jraft.entity.NodeId;
 import com.alipay.sofa.jraft.entity.PeerId;
-import com.alipay.sofa.jraft.option.ReplicatorGroupOptions;
+import com.alipay.sofa.jraft.option.*;
 import com.alipay.sofa.jraft.util.Describer;
 import com.alipay.sofa.jraft.util.ThreadId;
 

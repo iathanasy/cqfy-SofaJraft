@@ -19,9 +19,9 @@ import java.util.Set;
  */
 public class ConfigurationEntry {
 
-    private static final Logger LOG     = LoggerFactory.getLogger(ConfigurationEntry.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ConfigurationEntry.class);
 
-    //当前类对象的标识
+    //当前类对象的ID，其实就是日志id，因为集群变更也要作为日志复制给各个跟随者节点
     private LogId id = new LogId(0, 0);
     //当前生效的配置
     private Configuration conf = new Configuration();

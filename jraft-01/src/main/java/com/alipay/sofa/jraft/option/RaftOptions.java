@@ -50,8 +50,6 @@ public class RaftOptions implements Copiable<RaftOptions> {
     private int maxReadIndexLag = -1;
 
     //选举超时之后，当前的候选者节点是否退位，这里默认退位，或者是下台
-    //这个节点在第一版本还用不到，在之前的第一版本是用的上的，但是后来我删减了一些定时器
-    //现在就用不上了，等第二版本再使用这个成员变量吧
     private boolean stepDownWhenVoteTimedout = true;
 
 

@@ -511,7 +511,19 @@ public class Replicator implements ThreadId.OnError {
         //第一条日志的索引默认为1，前一条日志的索引肯定就是0，根据前一条日志索引获取前一条日志的任期
         //这里得到的就是0，这个要理清楚，这样在跟随者那里校验索引和日志的时候，才能校验成功
         final long prevLogTerm = this.options.getLogManager().getTerm(prevLogIndex);
-        //该方法在这里省略了一段校验是否需要安装快照的逻辑，在代码的第7版本将会为大家补全
+        //这里就是判断是否要安装快照给跟随着节点的逻辑，因为从日志组件中根据索引得到的prevLogTerm为0，但是prevLogIndex不为0
+        //这就说明要发送给跟随者节点的前一条日志的任期已经被快照化了，对应的日志也都删除了
+        if (prevLogTerm == 0 && prevLogIndex != 0) {
+            //这时候就判断一下当前要发送的是不是心跳请求，如果是心跳请求就不必执行安装快照的操作
+            //如果不是心跳请求，那就返回false，执行安装快照的操作
+            if (!isHeartbeat) {
+                Requires.requireTrue(prevLogIndex < this.options.getLogManager().getFirstLogIndex());
+                LOG.debug("logIndex={} was compacted", prevLogIndex);
+                return false;
+            } else {
+                prevLogIndex = 0;
+            }
+        }
         rb.setTerm(this.options.getTerm());
         rb.setGroupId(this.options.getGroupId());
         rb.setServerId(this.options.getServerId().toString());
@@ -1174,7 +1186,7 @@ public class Replicator implements ThreadId.OnError {
         final int rs = Math.max(this.reqSeq, this.requiredNextSeq);
         //得到下一个要分配的请求序号
         this.reqSeq = this.requiredNextSeq = rs;
-        //releaseReader();
+        releaseReader();
     }
 
 
@@ -1271,9 +1283,9 @@ public class Replicator implements ThreadId.OnError {
                     .append(" count=")
                     .append(request.getEntriesCount());
         }
-        //这里会判断一下status是否有误，这个status是从bolt那里包装过来的
-        //虽然Status是jraft框架中的类，但是在当前方法中的Status参数，要在bolft框架的rpc通信之后
-        //才能确定是成功还是错误状态
+        //这里会判断一下status是否有误，这个status也是从跟随者节点恢复过来的响应
+        //也是一个错误响应，只不过这个响应只拥有错误状态码，领导者只需要根据这个错误状态吗判断错误即可
+        //在文章中我会为大家讲解什么时候跟随者节点只会回复错误状态码
         if (!status.isOk()) {
             //如果响应有误，那就重置inflight队列
             if (isLogDebugEnabled) {
@@ -1345,7 +1357,7 @@ public class Replicator implements ThreadId.OnError {
                 if (r.nextIndex > 1) {
                     LOG.debug("logIndex={} dismatch", r.nextIndex);
                     //这个要从跟随者的handleAppendEntriesRequest方法中查看一下，是怎么根据领导者要发送的下一条日志的前一条日志的索引
-                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还大
+                    //从自己的日志组件中获得对应日志的，如果获取不到，其实就是获取到了，但是跟随者节点的日志的任期比领导者还小
                     //这时候需要让领导者的要发送的下一条日志递减，直到可以跟跟随者匹配到相同任期的日志，然后让领导者开始传输复制即可
                     //之前跟随者的日志比较大可能是因为旧的领导者发送的，比如整个集群就发送给了这一个节点，但是还没有提交，还没来得及提交旧的领导者就宕机了
                     r.nextIndex--;
@@ -1403,27 +1415,32 @@ public class Replicator implements ThreadId.OnError {
 
 
 
-
-
-
-
+    //该方法就是用来将领导者生成的日志快照远程安装给跟随者节点的
     void installSnapshot() {
+        //首先判断一下当前复制器对象是否正处在安装快照的状态中，如果正在安装快照就直接退出该方法
         if (getState() == State.Snapshot) {
             LOG.warn("Replicator {} is installing snapshot, ignore the new request.", this.options.getPeerId());
             unlockId();
             return;
         }
+        //定义一个是否需要释放锁的标识
         boolean doUnlock = true;
+        //安装快照之前，先连接一下要安装快照的跟随者节点，如果连接失败，直接退出当前方法
         if (!this.rpcService.connect(this.options.getPeerId().getEndpoint())) {
             LOG.error("Fail to check install snapshot connection to peer={}, give up to send install snapshot request.", this.options.getPeerId().getEndpoint());
             block(Utils.nowMs(), RaftError.EHOSTDOWN.getNumber());
             return;
         }
         try {
+            //判断快照读取器是否为null，因为快照传输并不是一个频繁的操作，往往只有节点刚加入到一个集群的时候，这个节点可能需要安装领导者的快照
+            //或者一个节点故障重启，进度落后太多了，需要安装领导者的快照。这时候才需要创建一个快照读取器，并且使用完这个快照读取器之后
+            //在快照成功安装之后，还会把这个快照读取器释放了
             Requires.requireTrue(this.reader == null,
                     "Replicator %s already has a snapshot reader, current state is %s", this.options.getPeerId(),
                     getState());
+            //获得快照读取器
             this.reader = this.options.getSnapshotStorage().open();
+            //判断快照读取器是否为空，为空则退出该方法
             if (this.reader == null) {
                 final NodeImpl node = this.options.getNode();
                 final RaftException error = new RaftException(EnumOutter.ErrorType.ERROR_TYPE_SNAPSHOT);
@@ -1433,6 +1450,7 @@ public class Replicator implements ThreadId.OnError {
                 node.onError(error);
                 return;
             }
+            //生成远程安装快照文件的url，跟随者节点会通过这个url远程下载快照文件
             final String uri = this.reader.generateURIForCopy();
             if (uri == null) {
                 final NodeImpl node = this.options.getNode();
@@ -1444,6 +1462,7 @@ public class Replicator implements ThreadId.OnError {
                 node.onError(error);
                 return;
             }
+            //从快照读取其中获得快照元数据
             final RaftOutter.SnapshotMeta meta = this.reader.load();
             if (meta == null) {
                 final String snapshotPath = this.reader.getPath();
@@ -1456,25 +1475,36 @@ public class Replicator implements ThreadId.OnError {
                 node.onError(error);
                 return;
             }
+            //在这里创建了安装快照的请求的构建器
             final RpcRequests.InstallSnapshotRequest.Builder rb = RpcRequests.InstallSnapshotRequest.newBuilder();
+            //封装一些基本信息
             rb.setTerm(this.options.getTerm());
             rb.setGroupId(this.options.getGroupId());
             rb.setServerId(this.options.getServerId().toString());
             rb.setPeerId(this.options.getPeerId().toString());
+            //在下面把快照元数据和url封装到安装快照的请求中
             rb.setMeta(meta);
             rb.setUri(uri);
 
+            //更新复制器当前的运行状态，更新为正在安装快照状态
             this.statInfo.runningState = RunningState.INSTALLING_SNAPSHOT;
+            //下面记录的就是本次快照中最后一条日志的索引以及对应任期
             this.statInfo.lastLogIncluded = meta.getLastIncludedIndex();
             this.statInfo.lastTermIncluded = meta.getLastIncludedTerm();
 
+            //创建安装快照请求
             final RpcRequests.InstallSnapshotRequest request = rb.build();
+            //设置复制器当前状态
             setState(State.Snapshot);
-            // noinspection NonAtomicOperationOnVolatileField
+            //递增快照安装次数
             this.installSnapshotCounter++;
+            //获取当前时间戳
             final long monotonicSendTimeMs = Utils.monotonicMs();
+            //得到Pipeline的版本号
             final int stateVersion = this.version;
+            //获取本次请求的序号
             final int seq = getAndIncrementReqSeq();
+            //在这里发送了安装快照的请求
             final Future<Message> rpcFuture = this.rpcService.installSnapshot(this.options.getPeerId().getEndpoint(),
                     request, new RpcResponseClosureAdapter<RpcRequests.InstallSnapshotResponse>() {
 
@@ -1484,6 +1514,7 @@ public class Replicator implements ThreadId.OnError {
                                     stateVersion, monotonicSendTimeMs);
                         }
                     });
+            //为该请求创建Inflight对象，并把该对象添加到inflights队列中
             addInflight(RequestType.Snapshot, this.nextIndex, 0, 0, seq, rpcFuture);
         } finally {
             if (doUnlock) {
@@ -1492,46 +1523,53 @@ public class Replicator implements ThreadId.OnError {
         }
     }
 
+
+
+
+    //领导者处理快照请求响应的方法
     @SuppressWarnings("unused")
     static boolean onInstallSnapshotReturned(final ThreadId id, final Replicator r, final Status status,
                                              final RpcRequests.InstallSnapshotRequest request,
                                              final RpcRequests.InstallSnapshotResponse response) {
+        //定义一个响应成功的标志
         boolean success = true;
+        //先把快照读取器释放了
         r.releaseReader();
-        // noinspection ConstantConditions
         do {
-            final StringBuilder sb = new StringBuilder("Node "). //
+            final StringBuilder sb = new StringBuilder("Node ").
                     append(r.options.getGroupId()).append(":").append(r.options.getServerId()). //
                     append(" received InstallSnapshotResponse from ").append(r.options.getPeerId()). //
                     append(" lastIncludedIndex=").append(request.getMeta().getLastIncludedIndex()). //
                     append(" lastIncludedTerm=").append(request.getMeta().getLastIncludedTerm());
+            //判断响应状态是否正确，不正确则退出循环
             if (!status.isOk()) {
                 sb.append(" error:").append(status);
                 LOG.info(sb.toString());
                 //notifyReplicatorStatusListener(r, ReplicatorEvent.ERROR, status);
                 if ((r.consecutiveErrorTimes++) % 10 == 0) {
                     LOG.warn("Fail to install snapshot at peer={}, error={}", r.options.getPeerId(), status);
-                }
+                }//把响应成功标志改为失败
                 success = false;
                 break;
-            }
+            }//判断响应是否正确，不正确则把相应成功标志改为失败
             if (!response.getSuccess()) {
                 sb.append(" success=false");
                 LOG.info(sb.toString());
                 success = false;
                 break;
             }
-            // success
+            //走到这里意味着响应成功，安装快照成功了，在快照元信息中记录着快照文件最后一条日志的索引
+            //这里直接让最后一条日志索引加1，就得到了领导者下一次要向跟随者节点传输日志的索引
             r.nextIndex = request.getMeta().getLastIncludedIndex() + 1;
             sb.append(" success=true");
             LOG.info(sb.toString());
         } while (false);
-        // We don't retry installing the snapshot explicitly.
-        // id is unlock in sendEntries
+        //如果快照安装没有成功，就重置Pipeline模式的两个相应队列
         if (!success) {
-            //should reset states
             r.resetInflights();
+            //设置当前复制器对象为探针状态，因为接下来要向跟随者节点发送探针请求，重新定位要发送的日志索引和方式
             r.setState(State.Probe);
+            //阻塞一段时间，然后发送探针请求即可
             r.block(Utils.nowMs(), status.getCode());
             return false;
         }
@@ -1541,11 +1579,14 @@ public class Replicator implements ThreadId.OnError {
 //            r.sendTimeoutNow(false, false);
 //        }
         //id is unlock in _send_entriesheartbeatCounter
+        //走到这里意味着响应是成功的，直接把复制器状态更新为State.Replicate
+        //意味着复制器要向跟随者节点传输日志了
         r.setState(State.Replicate);
         return true;
     }
 
 
+    //释放快照读取器的方法
     private void releaseReader() {
         if (this.reader != null) {
             Utils.closeQuietly(this.reader);
@@ -1553,38 +1594,10 @@ public class Replicator implements ThreadId.OnError {
         }
     }
 
+
     State getState() {
         return this.state;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //释放锁的方法

@@ -1321,8 +1321,7 @@ public class NodeImpl implements Node, RaftServerService {
                 //校验候选者节点的日志是否比当前节点最后一条日志新
                 final boolean logIsOk = new LogId(request.getLastLogIndex(), request.getLastLogTerm())
                         .compareTo(lastLogId) >= 0;
-                //这里的true也是写死的，本来是上面的哪个logIsOk变量，如果为true，并且当前节点还没有投过票
-                //那就给候选者投票。这里写死的代码后面版本都会重构
+                //那就给候选者投票。
                 if (logIsOk && (this.votedId == null || this.votedId.isEmpty())) {
                     //在这里把当前节点的状态改为跟随者
                     stepDown(request.getTerm(), false, new Status(RaftError.EVOTEFORCANDIDATE,
@@ -1483,7 +1482,7 @@ public class NodeImpl implements Node, RaftServerService {
                         .setTerm(this.currTerm)
                         .build();
             }
-            //更具领导者的任期来判断当前节点是否需要进行身份降级，也就是变更身份为跟随者
+            //根据领导者的任期来判断当前节点是否需要进行身份降级，也就是变更身份为跟随者
             //在下面这个方法中很可能会把当前节点的领导者id设置为请求中传递过来的节点的id
             checkStepDown(request.getTerm(), serverId);
             //这里判断了一个情况，就是当前节点有自己的领导者记录，并且领导者记录和

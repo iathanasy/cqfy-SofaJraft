@@ -21,6 +21,7 @@
         <module>jraft-10</module>
         <module>jraft-11</module>
         <module>jraft-12</module>
+        <module>jraft-13</module>
     </modules>
 
 

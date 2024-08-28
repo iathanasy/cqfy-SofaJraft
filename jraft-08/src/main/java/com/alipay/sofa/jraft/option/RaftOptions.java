@@ -25,7 +25,7 @@ public class RaftOptions implements Copiable<RaftOptions> {
     private int maxAppendBufferSize = 256 * 1024;
     //进行选举时的最大延迟时间
     private int maxElectionDelayMs = 1000;
-
+    //心跳时间计算因子
     private int electionHeartbeatFactor = 10;
     //批处理日志的集合的容量
     private int applyBatch = 32;

@@ -1293,8 +1293,7 @@ public class NodeImpl implements Node, RaftServerService {
             final long prevLogIndex = request.getPrevLogIndex();
             //获得领导者节点的前一条日志的任期
             final long prevLogTerm = request.getPrevLogTerm();
-            //获得当前跟随者节点的最后一条日志的任期，这里是根据领导者请求中的前一条日志索引获得的
-            //这里其实就是对这个索引进行判断了
+            //获得当前跟随者节点对应日志的任期，这里是根据领导者请求中的前一条日志索引获得的
             final long localPrevLogTerm = this.logManager.getTerm(prevLogIndex);
             //接下来就是具体判断了，先判断当前节点的最后一条日志的任期是否和领导者请求中的任期不想等
             //不相等就说明日志不匹配，可能跟随者的日志落后领导者，领导者发送过来的前一条日志，跟随者根本没有

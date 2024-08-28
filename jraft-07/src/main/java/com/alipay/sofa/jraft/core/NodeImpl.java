@@ -2102,8 +2102,12 @@ public class NodeImpl implements Node, RaftServerService {
         @Override
         public void run(final Status status) {
             if (status.isOk()) {
-                //在这里把日志应用到状态机上，注意，这里是领导者在调用这个方法，领导者的日志要应用到状态机上了，这里其实真正的作用就是自己给自己投了一票而已
-                //真正应用的入口方法在Replicator类中
+                //在这里把日志应用到状态机上，注意，这里是领导者在调用这个方法，当领导者内部的日志持久化成功后，领导者就会回调这个方法
+                //然后领导者的日志要应用到状态机上了，但是请大家仔细想想，领导者日志能应用到状态机上，实际上是要等到日志在集群各个节点中达成共识之后才行
+                //领导者将日志落盘成功之后，未必就能接收到集群中其他各个节点对这条日志的成功响应，但这里仍然执行了BallotBox的commitAt方法
+                //真正的目的其实就是领导者给自己的日志投一票而已，别忘了在commitAt方法中要先给日志投票，然后再判断日志是否拥有足够的票数，最后才决定是否应用日志
+                //所以这里其实真正的作用就是领导者直接给自己的日志投了一票而已
+                //到这里，大家应该就明白了领导者是怎么给自己的日志投票的吧？
                 NodeImpl.this.ballotBox.commitAt(this.firstLogIndex, this.firstLogIndex + this.nEntries - 1,
                         NodeImpl.this.serverId);
                 System.out.println("领导者自己把业务日志写入数据库成功！！！！！！！！！！！！！");

@@ -80,7 +80,7 @@ public class LocalRaftMetaStorage implements RaftMetaStorage {
         //对象中没有getNodeMetrics方法
         //this.nodeMetrics = this.node.getNodeMetrics();
         try {
-            //根据用户配置的路径创建用来存储元数据的元文件，如果元文件已经存在了，就不再重复创建
+            //根据用户配置的路径创建用来存储元数据的元文件夹，如果元文件已经存在了，就不再重复创建
             FileUtils.forceMkdir(new File(this.path));
         } catch (final IOException e) {
             //创建过程中发生异常就打印日志

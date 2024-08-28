@@ -1,0 +1,4 @@
+# Project exclude paths
+/jraft-01/target/
+/jraft-05/target/
+/jraft-06/target/

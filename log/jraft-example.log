@@ -1,0 +1,1448 @@
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:03:05 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:03:05 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:03:05 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:03:05 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:03:05 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:03:05 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:03:06 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:03:06 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:03:06 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:03:06 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:03:06 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:03:06 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:03:06 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-11 17:03:06 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.exception.RemotingException: Create connection failed. The address is 127.0.0.1:8083.
+2023-12-11 17:03:06 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-11 17:03:06 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-11 17:03:06 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=1, ServerErrorMsg:null.
+2023-12-11 17:03:06 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8082.
+2023-12-11 17:03:07 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-11 17:03:08 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8083.
+2023-12-11 17:03:08 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8081.
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-11 17:03:08 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=2, ServerErrorMsg:null.
+2023-12-11 17:03:08 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8082> received PreVoteRequest from 127.0.0.1:8081, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-11 17:03:08 [JRaft-RPC-Processor-0] INFO  NodeImpl:1696 - Node <counter/127.0.0.1:8081> received PreVoteResponse from 127.0.0.1:8082, term=0, granted=true.
+2023-12-11 17:03:08 [JRaft-RPC-Processor-0] INFO  NodeImpl:665 - Node <counter/127.0.0.1:8081> start vote and grant vote self, term=0.
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8082> received RequestVoteRequest from 127.0.0.1:8081, term=1, currTerm=0.
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-1] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8083> received RequestVoteRequest from 127.0.0.1:8081, term=1, currTerm=0.
+2023-12-11 17:03:08 [JRaft-RPC-Processor-0] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=2 ms
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=7 ms
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=0 ms
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-1] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=9 ms
+2023-12-11 17:03:08 [Bolt-default-executor-6-thread-1] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=0 ms
+2023-12-11 17:03:08 [JRaft-RPC-Processor-1] INFO  NodeImpl:816 - Node <counter/127.0.0.1:8081> become leader of group, term=1, conf=127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083, oldConf=.
+2023-12-11 17:03:08 [JRaft-RPC-Processor-1] INFO  Replicator:175 - Replicator=com.alipay.sofa.jraft.core.Replicator@b5e9fd9@127.0.0.1:8083 is started
+2023-12-11 17:03:08 [JRaft-RPC-Processor-1] INFO  Replicator:175 - Replicator=com.alipay.sofa.jraft.core.Replicator@248b85b6@127.0.0.1:8082 is started
+2023-12-11 17:03:08 [JRaft-RPC-Processor-2] WARN  NodeImpl:1589 - Node <counter/127.0.0.1:8081> received invalid RequestVoteResponse from 127.0.0.1:8083, state not in STATE_CANDIDATE but STATE_LEADER.
+2023-12-11 17:03:08 [Rpc-netty-server-worker-1-thread-2] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-11 17:03:08 [Rpc-netty-server-worker-1-thread-1] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [Append-Entries-Thread-Send0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-0] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-1] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-2] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-3] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-5] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-4] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-6] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [JRaft-Rpc-Closure-Executor-7] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:03:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:03:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:48 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:06:48 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:06:48 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:06:48 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:06:48 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:06:49 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:06:49 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:06:49 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:06:49 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:06:49 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:06:49 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:06:49 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-11 17:06:49 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-11 17:06:49 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-11 17:06:49 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:06:50 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-11 17:06:50 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-11 17:06:50 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-11 17:06:50 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-11 17:06:50 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8083.
+2023-12-11 17:06:51 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8081.
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-11 17:06:51 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-11 17:06:51 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=2, ServerErrorMsg:null.
+2023-12-11 17:06:51 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8082.
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8083> term 0 start preVote.
+2023-12-11 17:06:52 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=1, ServerErrorMsg:null.
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8082.
+2023-12-11 17:06:52 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1813 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8081.
+2023-12-11 17:06:52 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1773 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8083> received PreVoteRequest from 127.0.0.1:8082, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8081> received PreVoteRequest from 127.0.0.1:8082, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-11 17:06:52 [JRaft-RPC-Processor-1] INFO  NodeImpl:1696 - Node <counter/127.0.0.1:8082> received PreVoteResponse from 127.0.0.1:8083, term=0, granted=true.
+2023-12-11 17:06:52 [JRaft-RPC-Processor-1] INFO  NodeImpl:665 - Node <counter/127.0.0.1:8082> start vote and grant vote self, term=0.
+2023-12-11 17:06:52 [JRaft-RPC-Processor-0] WARN  NodeImpl:1677 - Node <counter/127.0.0.1:8082> received invalid PreVoteResponse from 127.0.0.1:8081, state not in STATE_FOLLOWER but STATE_CANDIDATE.
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8083> received RequestVoteRequest from 127.0.0.1:8082, term=1, currTerm=0.
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8081> received RequestVoteRequest from 127.0.0.1:8082, term=1, currTerm=0.
+2023-12-11 17:06:52 [JRaft-RPC-Processor-1] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=4 ms
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=6 ms
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=6 ms
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=0 ms
+2023-12-11 17:06:52 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=1 ms
+2023-12-11 17:06:52 [JRaft-RPC-Processor-2] INFO  NodeImpl:816 - Node <counter/127.0.0.1:8082> become leader of group, term=1, conf=127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083, oldConf=.
+2023-12-11 17:06:52 [JRaft-RPC-Processor-2] INFO  Replicator:175 - Replicator=com.alipay.sofa.jraft.core.Replicator@4bf9f0de@127.0.0.1:8083 is started
+2023-12-11 17:06:52 [JRaft-RPC-Processor-2] INFO  Replicator:175 - Replicator=com.alipay.sofa.jraft.core.Replicator@642ce2a5@127.0.0.1:8081 is started
+2023-12-11 17:06:52 [JRaft-RPC-Processor-3] WARN  NodeImpl:1589 - Node <counter/127.0.0.1:8082> received invalid RequestVoteResponse from 127.0.0.1:8081, state not in STATE_CANDIDATE but STATE_LEADER.
+2023-12-11 17:06:52 [Rpc-netty-server-worker-1-thread-1] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-11 17:06:52 [Rpc-netty-server-worker-1-thread-1] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:52 [Append-Entries-Thread-Send0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:06:52 [JRaft-Rpc-Closure-Executor-0] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:52 [JRaft-Rpc-Closure-Executor-1] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:52 [JRaft-Rpc-Closure-Executor-2] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:52 [JRaft-Rpc-Closure-Executor-3] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:52 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-5] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-4] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-6] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-7] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:53 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:54 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:55 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:674 - LEADER发送了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-11 17:06:56 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1335 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:12:59 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:12:59 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:12:59 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:12:59 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:12:59 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:13:01 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:13:01 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:13:01 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:13:01 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:13:02 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:13:02 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:13:02 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:13:02 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:13:02 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:13:02 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:13:02 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:13:02 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:13:03 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-13 12:13:03 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.exception.RemotingException: Create connection failed. The address is 127.0.0.1:8083.
+2023-12-13 12:13:03 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-13 12:13:03 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-13 12:13:03 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=1, ServerErrorMsg:null.
+2023-12-13 12:13:03 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8082.
+2023-12-13 12:13:03 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-13 12:13:04 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8083.
+2023-12-13 12:13:04 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8081.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8083> term 0 start preVote.
+2023-12-13 12:13:04 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=1, ServerErrorMsg:null.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8082.
+2023-12-13 12:13:04 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8081.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-13 12:13:04 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=2, ServerErrorMsg:null.
+2023-12-13 12:13:04 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8082> received PreVoteRequest from 127.0.0.1:8081, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-13 12:13:04 [JRaft-RPC-Processor-0] INFO  NodeImpl:1693 - Node <counter/127.0.0.1:8081> received PreVoteResponse from 127.0.0.1:8082, term=0, granted=true.
+2023-12-13 12:13:04 [JRaft-RPC-Processor-0] INFO  NodeImpl:665 - Node <counter/127.0.0.1:8081> start vote and grant vote self, term=0.
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8082> received RequestVoteRequest from 127.0.0.1:8081, term=1, currTerm=0.
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8083> received RequestVoteRequest from 127.0.0.1:8081, term=1, currTerm=0.
+2023-12-13 12:13:04 [JRaft-RPC-Processor-0] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=3 ms
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=6 ms
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-3] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=5 ms
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=1 ms
+2023-12-13 12:13:04 [Bolt-default-executor-6-thread-3] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=127.0.0.1:8081, cost time=1 ms
+2023-12-13 12:13:04 [JRaft-RPC-Processor-1] INFO  NodeImpl:816 - Node <counter/127.0.0.1:8081> become leader of group, term=1, conf=127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083, oldConf=.
+2023-12-13 12:13:04 [JRaft-RPC-Processor-1] INFO  Replicator:347 - Replicator=com.alipay.sofa.jraft.core.Replicator@674abfc@127.0.0.1:8083 is started
+2023-12-13 12:13:04 [JRaft-RPC-Processor-1] INFO  Replicator:347 - Replicator=com.alipay.sofa.jraft.core.Replicator@29a1a036@127.0.0.1:8082 is started
+2023-12-13 12:13:04 [JRaft-RPC-Processor-2] WARN  NodeImpl:1586 - Node <counter/127.0.0.1:8081> received invalid RequestVoteResponse from 127.0.0.1:8082, state not in STATE_CANDIDATE but STATE_LEADER.
+2023-12-13 12:13:04 [Rpc-netty-server-worker-1-thread-2] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-13 12:13:04 [Rpc-netty-server-worker-1-thread-1] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:04 [Append-Entries-Thread-Send0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:13:04 [JRaft-Rpc-Closure-Executor-0] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:04 [JRaft-Rpc-Closure-Executor-1] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:04 [JRaft-Rpc-Closure-Executor-3] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:04 [JRaft-Rpc-Closure-Executor-2] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:04 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-4] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-5] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-6] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-7] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:05 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:06 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:07 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:08 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:09 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:10 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:11 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:12 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:13 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:14 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:15 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:13:16 [counter/PeerPair[127.0.0.1:8082 -> 127.0.0.1:8081]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:07 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:14:07 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:14:07 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:14:07 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:14:07 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:14:08 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:14:08 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:14:08 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:14:08 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:14:08 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:14:08 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:14:09 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+2023-12-13 12:14:09 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.BoltRaftRpcFactory] loading.
+2023-12-13 12:14:09 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:14:09 [main] INFO  log:30 - Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+2023-12-13 12:14:09 [main] INFO  JRaftServiceLoader:255 - SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+2023-12-13 12:14:09 [main] INFO  NodeImpl:323 - The number of active nodes increment to 1.
+2023-12-13 12:14:09 [main] INFO  RaftGroupService:112 - Start the RaftGroupService successfully.
+2023-12-13 12:14:10 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8081> term 0 start preVote.
+2023-12-13 12:14:10 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-13 12:14:10 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-13 12:14:10 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8083.
+2023-12-13 12:14:10 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-13 12:14:10 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=2, ServerErrorMsg:null.
+2023-12-13 12:14:10 [JRaft-ElectionTimer-<counter/127.0.0.1:8081>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8081> channel init failed, address=127.0.0.1:8082.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8083> term 0 start preVote.
+2023-12-13 12:14:11 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8082 is connected
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8082, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8082, id=1, ServerErrorMsg:null.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8082.
+2023-12-13 12:14:11 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8083>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8083> channel init failed, address=127.0.0.1:8081.
+2023-12-13 12:14:11 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8083 is connected
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8083, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8083, id=1, ServerErrorMsg:null.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8083.
+2023-12-13 12:14:11 [Bolt-conn-event-executor-5-thread-1] INFO  ClientServiceConnectionEventProcessor:33 - Peer 127.0.0.1:8081 is connected
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] ERROR AbstractClientService:160 - Fail to connect 127.0.0.1:8081, remoting exception: com.alipay.remoting.rpc.exception.InvokeServerException: Server exception! Please check the server log, the address is 127.0.0.1:8081, id=2, ServerErrorMsg:null.
+2023-12-13 12:14:11 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] WARN  NodeImpl:1810 - Node <counter/127.0.0.1:8082> channel init failed, address=127.0.0.1:8081.
+2023-12-13 12:14:12 [JRaft-ElectionTimer-<counter/127.0.0.1:8082>0] INFO  NodeImpl:1770 - Node <counter/127.0.0.1:8082> term 0 start preVote.
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8081> received PreVoteRequest from 127.0.0.1:8082, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-3] INFO  NodeImpl:995 - Node <counter/127.0.0.1:8083> received PreVoteRequest from 127.0.0.1:8082, term=1, currTerm=0, granted=true, requestLastLogId=LogId [index=0, term=0],lastLogId=LogId [index=0, term=0].
+2023-12-13 12:14:12 [JRaft-RPC-Processor-0] INFO  NodeImpl:1693 - Node <counter/127.0.0.1:8082> received PreVoteResponse from 127.0.0.1:8081, term=0, granted=true.
+2023-12-13 12:14:12 [JRaft-RPC-Processor-0] INFO  NodeImpl:665 - Node <counter/127.0.0.1:8082> start vote and grant vote self, term=0.
+2023-12-13 12:14:12 [JRaft-RPC-Processor-1] WARN  NodeImpl:1674 - Node <counter/127.0.0.1:8082> received invalid PreVoteResponse from 127.0.0.1:8083, state not in STATE_FOLLOWER but STATE_CANDIDATE.
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8083> received RequestVoteRequest from 127.0.0.1:8082, term=1, currTerm=0.
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  NodeImpl:1068 - Node <counter/127.0.0.1:8081> received RequestVoteRequest from 127.0.0.1:8082, term=1, currTerm=0.
+2023-12-13 12:14:12 [JRaft-RPC-Processor-0] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server2/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=4 ms
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=5 ms
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server1/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=1 ms
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=0.0.0.0:0, cost time=7 ms
+2023-12-13 12:14:12 [Bolt-default-executor-6-thread-4] INFO  LocalRaftMetaStorage:174 - Save raft meta, path=/Users/chenqingyang/code/jraft-log/server3/raft_meta, term=1, votedFor=127.0.0.1:8082, cost time=0 ms
+2023-12-13 12:14:12 [JRaft-RPC-Processor-2] INFO  NodeImpl:816 - Node <counter/127.0.0.1:8082> become leader of group, term=1, conf=127.0.0.1:8081,127.0.0.1:8082,127.0.0.1:8083, oldConf=.
+2023-12-13 12:14:12 [JRaft-RPC-Processor-2] INFO  Replicator:347 - Replicator=com.alipay.sofa.jraft.core.Replicator@54d783ed@127.0.0.1:8083 is started
+2023-12-13 12:14:12 [JRaft-RPC-Processor-2] INFO  Replicator:347 - Replicator=com.alipay.sofa.jraft.core.Replicator@7b029273@127.0.0.1:8081 is started
+2023-12-13 12:14:12 [JRaft-RPC-Processor-3] WARN  NodeImpl:1586 - Node <counter/127.0.0.1:8082> received invalid RequestVoteResponse from 127.0.0.1:8083, state not in STATE_CANDIDATE but STATE_LEADER.
+2023-12-13 12:14:12 [Rpc-netty-server-worker-1-thread-2] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-13 12:14:12 [Rpc-netty-server-worker-1-thread-2] WARN  BoltRaftRpcFactory:75 - JRaft SET bolt.rpc.dispatch-msg-list-in-default-executor to be false for replicator pipeline optimistic.
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [Append-Entries-Thread-Send0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-0] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-1] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-3] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-2] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-5] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-4] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-6] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-7] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:12 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  Recyclers:38 - -Djraft.recyclers.maxCapacityPerThread: 4096.
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:13 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:14 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:15 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:16 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:17 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:18 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:19 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:20 [counter/PeerPair[127.0.0.1:8081 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！
+2023-12-13 12:14:21 [JRaft-Rpc-Closure-Executor-9] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:21 [JRaft-Rpc-Closure-Executor-8] INFO  Replicator:893 - LEADER发送了心跳消息！
+2023-12-13 12:14:21 [counter/PeerPair[127.0.0.1:8083 -> 127.0.0.1:8082]-AppendEntriesThread0] INFO  NodeImpl:1318 - FOLLOWER接收到了心跳消息！

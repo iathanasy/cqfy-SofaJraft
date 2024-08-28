@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jraft-05" />
+        <module name="jraft-04" />
+        <module name="jraft-03" />
+        <module name="jraft-02" />
+        <module name="jraft-09" />
+        <module name="jraft-08" />
+        <module name="jraft-07" />
+        <module name="jraft-06" />
+        <module name="jraft-01" />
+        <module name="jraft-12" />
+        <module name="jraft-11" />
+        <module name="jraft-10" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
